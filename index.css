@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+   /* background: url(space.jpg) no-repeat;*/
+   background: #FEFBEA;
+   /* background-image: url("stars.png");*/
+    background-size: cover;
+    
+}
+
+.acronymn{
+    /*background:red;*/
+    position: absolute;
+    top: 4%;
+    color: black;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+}
+
+.acronymn:hover{
+    text-shadow: 0 0 15px #b9b6a6, 0 0 15px #ffffff;
+}
+
+.acronymn h2{
+    position: relative;
+    color: black;
+    position: relative;
+     
+}
+/*
+.acronymn h2::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    color: white;
+    border-right: 0px solid #fff;
+    overflow: hidden;
+    /*background: pink;*/
+    /*animation: title 6s linear infinite;
+}
+
+@keyframes title{
+    0%,10%,100%{
+        width: 0%;
+        
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+*/
+
+.menu{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: red;*/
+}
+
+.menu li{
+    position: absolute;
+    left: -10%;/*0%;*/
+    list-style: none;
+    
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform-origin: 300px; /*250px;*/
+    transform: rotate(0deg) translateX(210px);
+    /*background: pink;*/
+    
+}
+
+.menu.active li{
+    transform: rotate(calc(360deg / 9 * var(--i))) 
+    translateX(0px);
+}
+
+.menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 85px;
+    list-style: none;
+    text-decoration: none;
+    color: var(--clr);
+    border: -2px solid var(--clr);
+    border-radius: 70%;
+    transform: rotate(calc(360deg / -9 * var(--i)));
+    transition: 1s;
+    /*background: green;*/
+}
+
+.menu li a h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu li a:hover{
+    background: var(--clr);
+    color: #FEFBEA;
+    box-shadow: 0 0 70px var(--clr);
+    /*box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 50px var(--clr);*/
+    transition: 0s;
+}
+
+.menu .toggle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: #2f3636;*/
+    /*background: red;*/
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 2em;
+    transition: transform 1.25s;
+}
+
+.menu .toggle img{
+    padding: 0px;
+    width: 210px; /*160px;*/
+    position: absolute;
+    left: -65px;
+    top: -93px;
+    /*background: blue;*/
+}
+
+.menu.active .toggle{
+    transform: rotate(360deg);
+}
+
+.menu li .lines{
+    position: absolute;
+    top: 50%;
+    left: 95px;
+    height: 2px;
+    width: 75px;
+    background: black;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.menu.active li .lines{
+    visibility: visible;
+    transition: 20s;
+    background: black;
+    /*background: var(--clr);*/
+}
+
+.menu .ML{
+    z-index: 50000;
+    visibility: hidden;
+}
+
+
+.menu .ML h4 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px #fff;
+    
+    font-size: 30px;
+    font-weight: 900;
+    transition: 0s;
+    animation: animate 6s linear infinite;
+}
+
+
+
+.menu.active .ML{
+    transition: 10s;
+    visibility: visible;
+}
+
+@keyframes animate{
+    10%,20%,40%,50%,70%,80%{
+        color: rgb(49, 47, 47);
+        text-shadow: none;
+    }
+
+    10.1%,20.1%,40.1%,50.1%,70.1%,80.1%,100%{
+        color: #fff;
+        text-shadow: 0 0 10px #76e6ee,
+        0 0 20px #76e6ee,
+        0 0 40px #76e6ee,
+        0 0 80px #76e6ee,
+        0 0 160px #76e6ee,
+        0 0 400px #76e6ee;
+    }
+}
+
+  
+.menu li .lines .left {
+    left: 2px;
+    top: -4px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    float: left;
+    visibility: hidden;
+    transform: rotate(45deg);
+}
+  
+.menu li .lines .right {
+    left: 63px;
+    top: -4px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    float: left;
+    visibility: hidden;
+    transform: rotate(-135deg);
+}
+
+.menu.active li .lines .left{
+    visibility: visible;
+    transition: 20s;
+    box-shadow: -2px 2px 0 var(--clr);
+}
+
+.menu.active li .lines .right{
+    visibility: visible;
+    transition: 20s;
+    box-shadow: -2px 2px 0 var(--clr);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    /*visibility: hidden;*/
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  @media screen and (max-height:1000px){
+    .acronymn{
+        position: absolute;
+        
+
+    }
+  }
+
+  @media screen and (max-width:680px){
+    .acronymn{
+        font-size: 15px;
+    }
+  }
+
+ .footer{
+     /*background: red;*/
+     position: absolute;
+     bottom: 2%;
+     height: 20px;
+     width: 250px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ } 
+
+ .footer .imglogo img{
+     width: 30px;
+     height: 15px;
+ }

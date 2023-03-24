@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body{
+    background: linear-gradient(to right, rgba(235,143,112), rgba(125,144,205));
+    /*background: url("images/green_bg.jpg");*/
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+
+header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    /*background: red;*/
+}
+
+header .logo{
+    position: relative;
+    max-width: 80px;
+    /*background: blue;*/
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    margin-top: 2px;
+    /*background: pink;*/
+}
+
+header ul li{
+    list-style: none;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px #000;
+}
+
+
+header ul li a{
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+    /*text-decoration: underline;*/
+    animation: underline 2s linear;
+    transform: translateY(-5px);
+    border-bottom: 1px solid white;
+}
+
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 25%;;
+    /*background: rebeccapurple;*/
+}
+
+.title h1{
+    color: white;
+    text-shadow: 2px 2px 1px #000;
+    /*color: linear-gradient(to right bottom, rgba(235,143,112), rgba(125,144,205));
+    background: -webkit-linear-gradient(#eb8f70, #7d90cd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*text-shadow: 0 0 3px #813232, 0 0 5px #000000;*/
+    
+}
+
+
+.pub_container{
+    display: flex;
+    width: 90%;
+    gap: 50px;
+    padding: 2rem;
+    margin-top: 15rem;
+    position: relative;
+    /*background: yellow;*/
+}
+
+.imagebox{
+    position: sticky;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 600px;
+    /*background: pink;*/
+}
+
+.imagebox img{
+    width: 90%;
+}
+
+.imagebox .text{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    /*background: green;*/
+}
+
+.pub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: rgb(250, 244, 244);
+    font-size: 20px;
+    font-family: Verdana, Geneva, sans-serif;
+    /*background: blue;*/
+}
+
+.pub_container .patents{
+    gap: 15px;
+    line-height: 1.5;
+    /*background: red;*/
+}
+
+.pub_container .patents .heading h2{
+    color: pink;
+    text-shadow: 2px 2px 1px #000;
+}
+
+.pub_container .books .heading h2{
+    color: pink;
+    text-shadow: 2px 2px 1px #000;
+    /*background: blue;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+}
+
+.pub_container .journals .heading h2{
+    color: pink;
+    text-shadow: 2px 2px 1px #000;
+    /*background: orange;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+}
+
+.pub_container .books li{
+    margin-top: 10px;
+}
+
+.pub_container .journals li{
+    margin-top: 10px;
+}
